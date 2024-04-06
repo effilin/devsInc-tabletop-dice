@@ -12,7 +12,7 @@
                 background-color: rgb(28, 56, 83);
             }
             #hero {
-                background: url(diceHero.jpg) no-repeat center ;
+                background: url(pictures/diceHero.jpg) no-repeat center ;
                 background-size: cover ;
                 position: relative;
                 margin: 0px 5rem 1rem 5rem ;
@@ -53,7 +53,7 @@
                 text-align: center;
                 padding: 2rem;
             }
-            #d20 {
+            .di {
                 height: 7rem;
                 transition: transform 1s;
                 float: left;
@@ -61,11 +61,11 @@
             .btn:hover {
                 box-shadow: 2px 2px 2px 0 palevioletred ;
             }
-            #d20:hover {
+            .di:hover {
                 transform: rotate(360deg);
             }.btn {
-                min-height: 3rem;
-                min-width: 4rem;
+                height: 3rem;
+                width: 5rem;
                 background-color: black;
                 border-radius: 5px;
                 color: whitesmoke;
@@ -79,6 +79,7 @@
                 color: whitesmoke;
                 text-shadow: 1px 1px 2px rgb(247, 85, 220)
             }
+
         </style>
 
     </head>
@@ -97,39 +98,47 @@
         <div class="grid-container">
             <div class="grid-item">
 
-                <img id="d20" src="d20.png" alt="D 20 dice">
-                <h5>Twenty Sided Dice</h5>
+                <img class="di" src="pictures/d20.png" alt="D 20 dice">
+                <h4>Twenty Sided Dice</h4>
                 <button class="btn" onclick="dice(20)">Roll</button>
 
             </div>
             <div class="grid-item">
-                <h5>12 Sided Dice</h5>
+                <h4>12 Sided Dice</h4>
                 <button class="btn" onclick="dice(12)">Roll</button>
             </div>
             <div class="grid-item">
-                <h5>10 Sided Dice</h5>
+                <h4>10 Sided Dice</h4>
                 <button class="btn" onclick="dice(10)">Roll</button>
             </div>
             <div class="grid-item">
-                <h5>6 Sided Dice</h5>
+                <img class="di" src="pictures/6sided.png" alt="6 sided dice">
+                <h4>6 Sided Dice</h4>
                 <button class="btn" onclick="dice(6)">Roll</button>
             </div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
+            <div class="grid-item">
+                <h4>4 Sided Dice</h4>
+                <button class="btn" onclick="dice(4)">Roll</button>
+            </div>
+            <div class="grid-item">
+                <h4> Make Your Own Dice</h4>
+                <form>
+                    <label for="nsides">Number of Sides?</label></form><br>
+                    <input type="number" id="nsides" min="1" value="9"><br>
+                    <input type="checkbox" id="zero" name="zero" value="yes">
+                    <label for="zero">You want zero included!</label>
+                
+                </form>
+            </div>
         </div>
 
         <script>
-            let num
+            
             function dice(num) {
                 let sum = Math.floor(Math.random() * (num) + 1 ) ;
                     document.getElementById("l1").innerHTML= sum;   
                 }
             
-              
-              
-            
-
-
         </script>
 
 
