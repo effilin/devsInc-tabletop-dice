@@ -31,3 +31,7 @@ Basic flow:
     User clicks roll dice 
 
     Result of roll is logged in a easily visible spot 
+
+unit tests:
+does the buttons work?
+how will the page look on different devices?
